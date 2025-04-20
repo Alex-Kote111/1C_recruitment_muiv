@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d69aa70b-b425-4a75-9176-3407ea5edcdd">
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83122c23-a850-48dd-bb1d-4b01decd6055">
   <producedTypes>
-    <objectType typeId="404f2302-0966-4f10-836e-25f4c6047681" valueTypeId="57429e2c-9756-4e3a-a9ac-13da153eb932"/>
-    <refType typeId="375f1b90-66df-4c94-a8e4-139fbcfe954d" valueTypeId="1b07797c-d3a7-49ce-9087-2f0aa99acc86"/>
-    <selectionType typeId="909e1003-44fc-48ac-b70e-508f1e1bf5b9" valueTypeId="e644082c-7888-412c-a70d-420faf4d134e"/>
-    <listType typeId="e4033da9-8f3f-41ee-9513-4791497ef07b" valueTypeId="f736f0be-595b-46a8-abee-2cea103bba9c"/>
-    <managerType typeId="84a1d081-69f8-49ae-b02e-60a7f4f2eb90" valueTypeId="8bed5b30-4450-436a-9d9a-36fb300926df"/>
+    <objectType typeId="6aa70b44-45fc-4767-b093-a4c4c7c873bb" valueTypeId="b8e05954-e13a-4a2f-82cf-6c1e1bba76ae"/>
+    <refType typeId="0c78b245-8efc-4757-9a2b-fd91df010ae7" valueTypeId="18649947-f258-4568-81e7-427a84319989"/>
+    <selectionType typeId="2cb7de14-190c-4773-902a-786328776e12" valueTypeId="d9f0ab84-2088-4290-ae0a-e68f4cccb16b"/>
+    <listType typeId="b854b4b5-b6be-4bfe-a761-c9d698120389" valueTypeId="45ca0383-a816-4650-a4da-bdb7a31929c5"/>
+    <managerType typeId="a4897224-f858-46cf-b0af-35e3e05e7431" valueTypeId="7e5869fa-6c28-4f76-8ca3-aee74b27c282"/>
   </producedTypes>
-  <name>Пользователи</name>
+  <name>Сотрудники</name>
   <synonym>
     <key>ru</key>
-    <value>Пользователи</value>
+    <value>Сотрудники</value>
   </synonym>
   <useStandardCommands>true</useStandardCommands>
-  <inputByString>Catalog.Пользователи.StandardAttribute.Code</inputByString>
-  <inputByString>Catalog.Пользователи.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Сотрудники.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.Сотрудники.StandardAttribute.Code</inputByString>
   <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
@@ -28,6 +28,7 @@
     <dataHistory>Use</dataHistory>
     <name>Predefined</name>
     <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
@@ -35,13 +36,15 @@
     <dataHistory>Use</dataHistory>
     <name>Ref</name>
     <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
   <standardAttributes>
     <dataHistory>Use</dataHistory>
     <name>DeletionMark</name>
-    <fillValue xsi:type="core:BooleanValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
   </standardAttributes>
@@ -77,7 +80,7 @@
     <name>Description</name>
     <synonym>
       <key>ru</key>
-      <value>Имя</value>
+      <value>Ф.И.О.</value>
     </synonym>
     <fillValue xsi:type="core:UndefinedValue"/>
     <fillChecking>ShowError</fillChecking>
@@ -98,19 +101,19 @@
   <fullTextSearch>Use</fullTextSearch>
   <objectPresentation>
     <key>ru</key>
-    <value>Пользователь</value>
+    <value>Сотрудник</value>
   </objectPresentation>
   <extendedObjectPresentation>
     <key>ru</key>
-    <value>Пользователь</value>
+    <value>Сотрудник</value>
   </extendedObjectPresentation>
   <listPresentation>
     <key>ru</key>
-    <value>Пользователи</value>
+    <value>Сотрудники</value>
   </listPresentation>
   <extendedListPresentation>
     <key>ru</key>
-    <value>Пользователи</value>
+    <value>Сотрудники</value>
   </extendedListPresentation>
   <levelCount>2</levelCount>
   <foldersOnTop>true</foldersOnTop>
@@ -123,114 +126,91 @@
   <defaultPresentation>AsDescription</defaultPresentation>
   <editType>InDialog</editType>
   <choiceMode>BothWays</choiceMode>
-  <defaultObjectForm>Catalog.Пользователи.Form.ФормаЭлемента</defaultObjectForm>
-  <attributes uuid="86274e4a-7ea8-47db-8c91-90a57dd54cf7">
-    <name>ПолноеИмя</name>
+  <attributes uuid="d1ad9737-872a-4f3d-bf9f-8dfb3a225a21">
+    <name>Подразделение</name>
     <synonym>
       <key>ru</key>
-      <value>Полное имя</value>
+      <value>Подразделение</value>
     </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
-        <length>100</length>
+        <length>10</length>
       </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="cb6881c0-bca4-4f70-9ed7-60cba22d04fd">
-    <name>Сотрудник</name>
+  <attributes uuid="750f7957-fd15-4bc9-bacf-de204092a477">
+    <name>Должность</name>
     <synonym>
       <key>ru</key>
-      <value>Сотрудник</value>
-    </synonym>
-    <type>
-      <types>CatalogRef.Сотрудники</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="5c1c1d87-882f-437d-9c3e-ea08065fe925">
-    <name>ИспользоватьСвоеПриложение</name>
-    <synonym>
-      <key>ru</key>
-      <value>Использовать свое приложение</value>
-    </synonym>
-    <type>
-      <types>Boolean</types>
-    </type>
-    <minValue xsi:type="core:UndefinedValue"/>
-    <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
-    <fullTextSearch>Use</fullTextSearch>
-    <dataHistory>Use</dataHistory>
-  </attributes>
-  <attributes uuid="dbbf1177-8769-41d4-80c8-3fc8eafc8820">
-    <name>ИдентификаторПриложения</name>
-    <synonym>
-      <key>ru</key>
-      <value>Идентификатор приложения</value>
+      <value>Должность</value>
     </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
-        <length>64</length>
+        <length>10</length>
       </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="c4e9a927-0bff-45b5-9e3c-28a4769914b0">
-    <name>СекретПриложения</name>
+  <attributes uuid="2f172a5f-1772-4188-955c-689be105dda4">
+    <name>РабочийТелефон</name>
     <synonym>
       <key>ru</key>
-      <value>Секрет приложения</value>
+      <value>Рабочий телефон</value>
     </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
-        <length>64</length>
+        <length>10</length>
       </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="bc97015f-668f-4742-94a6-ddf3725cea51">
-    <name>НазваниеПриложения</name>
+  <attributes uuid="76c60a7b-1d6e-462f-bb56-f7d503eb3333">
+    <name>МобильныйТелефон</name>
     <synonym>
       <key>ru</key>
-      <value>Название приложения</value>
+      <value>Мобильный телефон</value>
     </synonym>
     <type>
       <types>String</types>
       <stringQualifiers>
-        <length>100</length>
+        <length>10</length>
       </stringQualifiers>
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <attributes uuid="78cec437-d56d-4f2f-a6d6-daddf5a87ee2">
-    <name>ПочтаРазработчика</name>
+  <attributes uuid="ba090684-ef85-4de8-8d2e-5d8748211b6a">
+    <name>Почта</name>
     <synonym>
       <key>ru</key>
-      <value>Почта разработчика</value>
+      <value>Email</value>
     </synonym>
     <type>
       <types>String</types>
@@ -240,17 +220,10 @@
     </type>
     <minValue xsi:type="core:UndefinedValue"/>
     <maxValue xsi:type="core:UndefinedValue"/>
-    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
     <fullTextSearch>Use</fullTextSearch>
     <dataHistory>Use</dataHistory>
   </attributes>
-  <forms uuid="9479fef2-c274-4d32-ab2d-ac5ec75237dc">
-    <name>ФормаЭлемента</name>
-    <synonym>
-      <key>ru</key>
-      <value>Форма элемента</value>
-    </synonym>
-    <usePurposes>PersonalComputer</usePurposes>
-    <usePurposes>MobileDevice</usePurposes>
-  </forms>
 </mdclass:Catalog>
